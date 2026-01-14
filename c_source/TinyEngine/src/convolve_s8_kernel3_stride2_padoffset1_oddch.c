@@ -14,6 +14,7 @@ tinyengine_status convolve_s8_kernel3_stride2_padoffset1_oddch(
 		const uint16_t output_x, const uint16_t output_y,
 		const uint16_t output_ch, int16_t *runtime_buf, int8_t pad_value
 ) {
+	printf("convolve_s8 start\n");
 	(void) input_x;
 	(void) input_y;
 

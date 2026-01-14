@@ -17,6 +17,7 @@ int8_t *mat_mult_kernel_s8_s16_one_column(const int8_t *input_a,
 							const int32_t *const output_bias,
 							int8_t *out_0)
 {
+    //printf("mat_mul_kernel start\n");
     const int32_t *bias = output_bias;
 
     uint32_t row_count = output_ch;
@@ -32,7 +33,7 @@ int8_t *mat_mult_kernel_s8_s16_one_column(const int8_t *input_a,
         /* load the bias */
         if (bias)
         {
-            ch_0_out_0 = *bias;
+            ch_0_out_0 = *bias; //bias: given neuron's influence on the next layer. (partial derivitive)
         }
 
         for (int32_t i_col = 0; i_col < num_col_a; ++i_col) {

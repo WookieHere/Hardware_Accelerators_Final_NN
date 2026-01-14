@@ -11,6 +11,7 @@ tinyengine_status requantize_uint8_to_int8(
 		const int32_t min_val, const int32_t max_val,
 		int8_t *output)
 {
+	printf("requantize start\n");
 	uint8_t* input = (uint8_t*)inputptr;
 	for (int i = 0; i < size; ++i) {
 		const int32_t num = input[i] - input_zeropoint;

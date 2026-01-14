@@ -14,7 +14,7 @@ tinyengine_status convolve_s8_kernel3_stride1_pad1(
 		const uint16_t output_x, const uint16_t output_y,
 		const uint16_t output_ch, int16_t *runtime_buf, int8_t pad_value
 ) {
-
+	printf("convolve_s8_s1p1 start\n");
 	if (input_ch % 4 != 0 || input_ch % 2 != 0) {
 		printf("input_ch %d not divisible by 4\n", input_ch);
 		fflush(stdout);

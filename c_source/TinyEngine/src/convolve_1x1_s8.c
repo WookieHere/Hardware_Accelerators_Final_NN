@@ -15,7 +15,7 @@ tinyengine_status convolve_1x1_s8(const int8_t *input, const uint16_t input_x,
 		const int32_t out_activation_max, int8_t *output, const uint16_t output_x,
 		const uint16_t output_y, const uint16_t output_ch, int16_t *runtime_buf) {
 
-
+	printf("convolve_1x1 start\n");
 	(void) input_x;
 	(void) input_y;
 

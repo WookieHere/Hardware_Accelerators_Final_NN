@@ -11,6 +11,7 @@ tinyengine_status reduce_mean_axis_1_2_int8(
 		const int32_t output_zeropoint,
 		const int32_t min_val, const int32_t max_val,
 		int8_t *output) {
+	printf("reduce start\n");
 	for (int k = 0; k < input_c; ++k) {
 		int32_t sum = 0;
 		for (int i = 0; i < input_h; ++i) {
