@@ -5,6 +5,8 @@
  * Target ISA:  ARMv7E-M
  * Author: wmchen@mit.edu
  * -------------------------------------------------------------------- */
+#include <stdio.h>
+
 #include "arm_nnsupportfunctions.h" //TODO: remove this in the future for self-contained
 #include "tinyengine_function.h"
 void depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_kernel_CHW(
@@ -22,6 +24,7 @@ tinyengine_status depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW(q7_t *
                 const uint16_t output_x, const uint16_t output_y,
                 const uint16_t output_ch, q15_t *runtime_buf, q7_t pad_value)
 {
+    printf("depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_kernel_CHW start\n");
 
     uint16_t c,i,j;
     q7_t *cols_8b_start = (q7_t *)runtime_buf;
